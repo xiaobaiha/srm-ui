@@ -6,12 +6,18 @@ module.exports = {
   
   entry: {
     index: './src/index.js',
-    vendor: ['@material-ui/core', '@material-ui/icons']
+    vendor: [
+      '@material-ui/core/Button', 
+      '@material-ui/core/Dialog', 
+      '@material-ui/icons/FirstPage',
+      'react',
+      'prop-types'
+    ]
   },
 
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname),
+    path: path.resolve(__dirname, 'lib'),
     libraryTarget: 'commonjs2'
   },
 
@@ -33,7 +39,8 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(['lib'])
+    new CleanWebpackPlugin(['lib']),
+    // new SyntaxDynamicImportPlugin()
   ],
 
   optimization: {
