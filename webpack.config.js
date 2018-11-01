@@ -6,13 +6,13 @@ module.exports = {
   
   entry: {
     index: './src/index.js',
-    // vendor: [
-      // '@material-ui/core/Button', 
-      // '@material-ui/core/Dialog', 
-      // '@material-ui/icons/FirstPage',
-      // 'react',
-      // 'prop-types'
-    // ]
+    vendor: [
+      '@material-ui/core/Button', 
+      '@material-ui/core/IconButton', 
+      '@material-ui/icons/KeyboardArrowLeft',
+      'react',
+      'prop-types'
+    ]
   },
 
   output: {
@@ -39,13 +39,6 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(['lib']),
-    // new SyntaxDynamicImportPlugin()
+    new CleanWebpackPlugin(['lib'])
   ],
-
-  optimization: {
-    splitChunks: {
-      chunks: 'all'
-    }
-  }
 }

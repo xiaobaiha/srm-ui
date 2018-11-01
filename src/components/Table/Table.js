@@ -13,6 +13,7 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import Pager from '../Pager/Pager';
 
 const actionsStyles = theme => ({
   root: {
