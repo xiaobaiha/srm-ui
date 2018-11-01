@@ -6,13 +6,13 @@ module.exports = {
   
   entry: {
     index: './src/index.js',
-    vendor: [
-      '@material-ui/core/Button', 
-      '@material-ui/core/Dialog', 
-      '@material-ui/icons/FirstPage',
-      'react',
-      'prop-types'
-    ]
+    // vendor: [
+      // '@material-ui/core/Button', 
+      // '@material-ui/core/Dialog', 
+      // '@material-ui/icons/FirstPage',
+      // 'react',
+      // 'prop-types'
+    // ]
   },
 
   output: {
