@@ -1,11 +1,18 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import PropTypes from 'prop-types';
 
-class Button extends React.Component {
+class MButton extends React.Component {
   render() {
+    const {children, disabled, ...rest} = this.props;
     return (
-      <button>hello</button>
+      <Button>{children}</Button>
     );
   }
 }
 
-module.exports =  Button;
+MButton.propTypes = {
+    type: PropTypes.string
+};
+
+module.exports =  MButton;

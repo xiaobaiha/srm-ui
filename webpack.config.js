@@ -10,16 +10,20 @@ module.exports = {
 
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, "lib"),
+    chunkFilename: '[name].bundle.js',
+    path: path.resolve(__dirname),
     libraryTarget: 'commonjs2'
   },
 
   module: {
     rules: [
       { 
-        test: /\.js$/, 
+        test: /\.jsx?$/, 
         exclude: /node_modules/, 
-        loader: 'babel-loader?presets[]=env&presets[]=react' 
+        loader: 'babel-loader',
+        query: {
+            presets: ['react', 'es2015', "stage-0"]
+        } 
       },
       { 
         test: /\.css$/, 
@@ -30,5 +34,11 @@ module.exports = {
 
   plugins: [
     new CleanWebpackPlugin(['lib'])
-  ]
+  ],
+
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  }
 }
