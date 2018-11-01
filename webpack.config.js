@@ -5,12 +5,12 @@ module.exports = {
   mode: 'production', 
   
   entry: {
-    index: './src/index.js'
+    index: './src/index.js',
+    vendor: ['@material-ui/core', '@material-ui/icons']
   },
 
   output: {
     filename: '[name].js',
-    chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname),
     libraryTarget: 'commonjs2'
   },
