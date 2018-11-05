@@ -1,5 +1,8 @@
 import Button from './components/Button/Button';
 import Table from './components/Table/Table';
 import Pager from './components/Pager/Pager';
+import Empty from './components/Empty/Empty';
 
-export {Button, Table, Pager};
+import "./assets/css/base.scss";
+
+export {Button, Table, Pager, Empty};
