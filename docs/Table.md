@@ -2,6 +2,7 @@
 表格组件
 
 ## 使用示例
+### 基本用法
 ```javascript
 <Table
     columns={[
@@ -16,6 +17,7 @@
     ]}
     />
 ```
+![](./imgs/example-table0.png)
 
 
 ## props
