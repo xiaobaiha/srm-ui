@@ -36,7 +36,6 @@ translate(componentName).then(chineseName => {
             matchWholeContent.push(`${matchWholeContent.length+1}. ${chineseName} ${componentName} [${componentName}.md](./docs/${componentName}.md)`)
             return header+matchWholeContent.join('\n')+'\n'+footer;
         });
-    console.log({readmeContent})
     fs.writeFileSync(readmePath, readmeContent);
 })
 

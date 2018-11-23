@@ -11,9 +11,13 @@ npm run add ['basic'|'sprite'] [componentName]
 ```
 'basic'代表基础组件
 'sprite'代表业务组件
-例：增加Button基础组件
+例1: 增加Button基础组件
 ```bash
 npm run add basic Button
+```
+例2: 增加TaskList业务组件
+```bash
+npm run add sprite TaskList
 ```
 ## 基础组件
 
