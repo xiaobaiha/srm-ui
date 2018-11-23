@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --progress",
-    "watch": "webpack --watch --progress"
+    "watch": "webpack --watch --progress",
+    "add": "node ./scripts/add-component.js"
   },
   "keywords": [
     "momenta",
@@ -26,6 +27,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.1",
+    "node-fetch": "^2.3.0",
     "node-sass": "^4.10.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
