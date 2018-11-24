@@ -5,7 +5,7 @@ module.exports = {
   mode: 'production', 
   
   entry: {
-    index: './src/index.js',
+    index: './src/index.ts',
     vendor: [
       '@material-ui/core/Button', 
       '@material-ui/core/IconButton', 
@@ -17,7 +17,7 @@ module.exports = {
 
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'lib'),
+    path: path.resolve(__dirname, 'core'),
     libraryTarget: 'commonjs2'
   },
 
@@ -32,6 +32,11 @@ module.exports = {
         } 
       },
       { 
+        test: /\.tsx?$/, 
+        exclude: /node_modules/, 
+        loader: 'ts-loader'
+      },
+      { 
         test: /\.(css|scss)$/, 
         use: ['style-loader','css-loader', 'sass-loader']
       }
@@ -39,6 +44,6 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(['lib'])
+    new CleanWebpackPlugin(['core'])
   ],
 }

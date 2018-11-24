@@ -21,7 +21,7 @@ npm run add sprite TaskList
 ```
 ## 基础组件
 
-1. 分页器 Pager [Pager.md](./docs/Table)
+1. 分页器 Pager [Pager.md](./docs/Pager.md)
 2. 表格 Table [Table.md](./docs/Table.md)
 
 
