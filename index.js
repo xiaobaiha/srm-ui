@@ -1,2 +1,3 @@
-import index from './core/index';
-export default index;
+const core = require('./src/index.ts');
+// const core = require('./core/index');
+module.exports = core;

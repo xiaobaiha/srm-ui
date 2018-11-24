@@ -2,6 +2,29 @@
 
 使用Typescript/React Hooks，基于material-ui，对基础组件以及业务组件进行进一步封装
 
+## How to use
+
+### dev
+
+1. 在此项目下运行
+```bash
+yarn link
+```
+2. 在需要使用组件的测试项目下运行
+```bash
+yarn link srm-ui
+```
+3. 测试项目可使用以下方式引用组件
+```javascript
+import {Pager} from 'srm-ui';
+```
+
+### npm (not available now)
+
+```bash
+npm install srm-ui
+```
+
 ## Userful Scripts
 
 ### 增加组件自动化命令
