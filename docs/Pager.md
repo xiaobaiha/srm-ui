@@ -13,7 +13,7 @@
 ## props
 |属性|说明|示例|
 |-|-|-|
-|current|||
-|sum|||
-|onJump|||
-||||
+|current|当前在第几页,默认1||
+|sum|总共多少页||
+|onJump|点击某一页的回调||
+|showNumber|显示几个页数,默认5||
