@@ -19,3 +19,4 @@
 |onJump|点击某一页的回调|function(page) {console.log("jump to page:" page)}|
 |showNumber|显示几个页数,默认5|5|
 |buttonStyle|按钮样式|{minWidth: "40px"}|
+|style|分页器样式重载|{justifyContent: 'flex-end',margin: '0.5rem'}|
