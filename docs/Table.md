@@ -30,3 +30,4 @@
 |data[]:Object      |表格一行的数据(依据columns),对象中的每个key代表columns中一列的dataIndex,value代表这行数据在该列的值|{name: 'Tom', age: 20, address: '山东'}|
 |style:Object       |样式|与React中style相同|
 |className:String   |类名|与React中className相同|
+|pagination|分页控制，默认不显示分页器|{rowsPerPage: 5}|
