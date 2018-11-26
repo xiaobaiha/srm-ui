@@ -21,6 +21,7 @@ interface PagerProps {
     sum: number;
     onJump?: (page: number) => any;
     showNumber?: number;
+    buttonStyle?: object;
 }
 
 class Pager extends React.Component<PagerProps> {
@@ -36,13 +37,13 @@ class Pager extends React.Component<PagerProps> {
         return pages;
     }
     render(){
-        const {current = 1, sum, onJump, showNumber = 5}: PagerProps = this.props;
+        const {current = 1, sum, onJump, showNumber = 5, buttonStyle}: PagerProps = this.props;
         const pages = this.calcPages(current, sum, showNumber);
         const showLeftEllipsis = pages[0] + 1 < pages[1];
         const showRightEllipsis = pages[showNumber-2] + 1 < pages[showNumber-1];
         return (
             <div style={{display: 'flex'}}>
-                <Button disabled={current <= 1} style={{...style.button, ...style.marginR_8}}><KeyboardArrowLeft /></Button>
+                <Button disabled={current <= 1} style={{...style.button, ...style.marginR_8, ...buttonStyle}}><KeyboardArrowLeft /></Button>
                 <div>
                 <Button 
                     color={current===1?"primary":"default"} 

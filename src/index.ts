@@ -4,4 +4,6 @@ import Pager from './components/Pager/Pager';
 // import Empty from './components/Empty/Empty';
 
 import "./assets/css/base.scss";
-export {Pager};
+export {
+    Pager
+};
