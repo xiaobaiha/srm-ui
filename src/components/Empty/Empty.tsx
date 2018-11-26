@@ -1,7 +1,25 @@
+/* @flow */
 import React from "react";
 
-class Empty extends React.PureComponent {
+interface EmptyStateProps {
+    className: string,
+    addClassName: string,
+    messageClassName: string,
+    message?: string,
+    illustration?: string,
+    title?: string,
+    action?: {
+        message: string,
+        func: Function
+    },
+}
 
+class EmptyState extends React.PureComponent<EmptyStateProps> {
+    static defaultProps = {
+        addClassName: '',
+        className: 'flex flex-center flex-verticle quiet round keyline-all keyline-dash row10 space-5 line-space',
+        messageClassName: 'center'
+    }
     onClick = () => {
         if (this.props.action && this.props.action.func) {
             this.props.action.func();
@@ -22,10 +40,4 @@ class Empty extends React.PureComponent {
     }
 }
 
-EmptyState.defaultProps = {
-    addClassName: '',
-    className: 'flex flex-center flex-verticle quiet round keyline-all keyline-dash row10 space-5 line-space',
-    messageClassName: 'center'
-};
-
-module.exports = Empty;
+export default EmptyState;

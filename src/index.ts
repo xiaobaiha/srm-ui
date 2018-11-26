@@ -1,4 +1,4 @@
-// import Button from './components/Button/Button';
+import Empty from './components/Empty/Empty';
 import Table from './components/Table/Table';
 import Pager from './components/Pager/Pager';
 import Modal from './components/Modal/Modal';
@@ -9,5 +9,6 @@ export {
     Pager,
     Table,
     Modal,
-    Notification
+    Notification,
+    Empty
 };
