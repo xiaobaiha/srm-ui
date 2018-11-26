@@ -1,81 +1,94 @@
-// import React from 'react';
-// import { useState } from 'react';
-// import Table from '@material-ui/core/Table';
-// import TableBody from '@material-ui/core/TableBody';
-// import TableHead from '@material-ui/core/TableHead';
-// import TableCell from '@material-ui/core/TableCell';
-// import TableRow from '@material-ui/core/TableRow';
-// import TableFooter from '@material-ui/core/TableFooter';
-// import TablePagination from '@material-ui/core/TablePagination';
-// import IconButton from '@material-ui/core/IconButton';
-// import FirstPageIcon from '@material-ui/icons/FirstPage';
-// import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-// import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-// import LastPageIcon from '@material-ui/icons/LastPage';
-// import PropTypes from 'prop-types';
-// import { withStyles } from '@material-ui/core/styles';
-// import Pager from '../Pager/Pager';
+import React from 'react';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableHead from '@material-ui/core/TableHead';
+import TableCell from '@material-ui/core/TableCell';
+import TableRow from '@material-ui/core/TableRow';
+import TableFooter from '@material-ui/core/TableFooter';
+import Pager from '../Pager/Pager';
 
-// interface TableProps {
-//   columns: TableColumnItem[];
-//   data: ;
-// }
+interface TableProps {
+    columns: TableColumnItem[];
+    data: TableDataItem[];
+    pagination?: Pagination;
+    className?: string;
+}
 
-// interface TableColumnItem {
-//   key: string;
-//   title: string;
-//   dataIndex: string;
-// }
+interface TableState {
+    currentPage: number;
+}
+interface TableColumnItem {
+    key: string;
+    title: string;
+    dataIndex: string;
+    width?: string;
+}
 
-// interface TableDataItem {
-//   TableColumnItem.dataIndex
-// }
-// const actionsStyles = theme => ({
-//   root: {
-//     flexShrink: 0,
-//     color: theme.palette.text.secondary,
-//     marginLeft: theme.spacing.unit * 2.5,
-//   },
-// });
+interface TableDataItem {
+    [key: string]: any;
+}
 
-// const OneRow = ({ rowData }) => {
-//   const key = rowData.shift();
-//   return <TableRow key={ key }>
-//     {
-//       rowData.map(cell => (
-//         <TableCell>{ cell } </TableCell>
-//       ))
-//     }
-//     </TableRow>
-// }
+interface Pagination {
+    rowsPerPage: number;
+}
 
-// function MTable(props) {
-//   const [columns, setColumns] = useState(props.columns);
-//   return (
-//     <Table style= { style } className = { className } >
-//       <TableHead>
-//       <TableRow>
-//       { columns.map((column) => (<TableCell style= {{ width: column.width }} key = { column.key } > { column.title } </TableCell>))}
-//         </TableRow>
-//         </TableHead>
-//         < TableBody >
-//         {
-//           pagination? 
-//                             formatData.slice(pagination.page * pagination.rowsPerPage, (pagination.page + 1) * pagination.rowsPerPage).map(oneRow => (
-//             <OneRow rowData= { oneRow } > </OneRow>
-//           )):
-//           formatData.map(oneRow => (
-//             <OneRow rowData= { oneRow } > </OneRow>
-//           ))
-//         }
-//         </TableBody>
-//   {
-//     pagination ? <TableFooter>
-//       <TableRow>
-//         </TableRow>
-//         </TableFooter>:null}
-//         </Table>
-//                 )
-//   }
+interface OneRowProps {
+    rowData: TableDataItem;
+    rowIndex: number;
+}
 
-//   export default MTable;
+const OneRow = ({ rowData, rowIndex }: OneRowProps) => {
+    return <TableRow key={rowIndex}>
+        {
+            Object.keys(rowData).map(cell => (
+                <TableCell>{rowData[cell]} </TableCell>
+            ))
+        }
+    </TableRow>
+}
+
+class MTable extends React.Component<TableProps, TableState> {
+    constructor(props: TableProps){
+        super(props);
+        this.state = {
+            currentPage: 0
+        };
+    }
+    render() {
+        const {columns, data, pagination, className} = this.props;
+        const {currentPage} = this.state;
+        const sumPage = pagination? Math.ceil(data.length / pagination.rowsPerPage): 1;
+        const middlePages = pagination?
+            data.slice(currentPage * pagination.rowsPerPage, (this.state.currentPage + 1) * pagination.rowsPerPage):
+            data;
+        return (
+            <div>
+            <Table className={className} >
+                <TableHead>
+                    <TableRow>
+                        {columns.map((column) => (<TableCell style={{ width: column.width }} key={column.key} > {column.title} </TableCell>))}
+                    </TableRow>
+                </TableHead>
+                < TableBody >
+                    {
+                        middlePages.map((oneRow, index) => (
+                            <OneRow rowIndex={index} rowData={oneRow} > </OneRow>
+                        ))
+                    }
+                </TableBody>
+            </Table>
+            {pagination && 
+                <Pager 
+                    sum={sumPage} 
+                    current={currentPage+1} 
+                    style={{justifyContent: 'flex-end',margin: '0.5rem'}}
+                    onJump={page => this.setState({currentPage: page-1})}
+                    />
+            }
+            </div>
+        )
+    }
+}
+
+
+export default MTable;
