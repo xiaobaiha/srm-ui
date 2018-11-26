@@ -52,6 +52,7 @@ npm run add sprite TaskList
 1. 分页器 Pager [Pager.md](./docs/Pager.md)
 2. 表格 Table [Table.md](./docs/Table.md)
 3. 弹窗 Modal [Modal.md](./docs/Modal.md)
+4. 通知 Notification [Notification.md](./docs/Notification.md)
 
 
 ## 业务组件

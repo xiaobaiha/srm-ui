@@ -386,3 +386,19 @@ div, li {
 .muted-notification__content>div {
     max-width: 88%;
 }
+
+.notification-success {
+    background-color: #43a047 !important;
+}
+
+.notification-info {
+    background-color: #1976d2 !important;
+}
+
+.notification-warning{
+    background-color: #ffa000 !important;
+}
+
+.notification-error {
+    background-color: #d32f2f !important;
+}
