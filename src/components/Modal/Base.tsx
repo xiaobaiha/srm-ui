@@ -13,9 +13,10 @@ interface BaseDialogParams {
     title?: any;
     closeText?: string;
     okText?: string;
+    showCancel?: boolean;
 }
 
-const BaseDialog = ({ onCancel, onOk, message, title, closeText, okText }: BaseDialogParams) => {
+const BaseDialog = ({ onCancel, onOk, message, title, closeText, okText, showCancel }: BaseDialogParams) => {
     return (
         <Dialog
             open={true}
@@ -31,9 +32,9 @@ const BaseDialog = ({ onCancel, onOk, message, title, closeText, okText }: BaseD
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
-                <Button onClick={onCancel} color="default">
+                {showCancel &&<Button onClick={onCancel} color="default">
                 {closeText? closeText: '取消'}
-                </Button>
+                </Button>}
                 <Button onClick={onOk? onOk: onCancel} color="primary" autoFocus>
                 {okText? okText: '确定'}
                 </Button>

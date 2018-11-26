@@ -1,10 +1,10 @@
-// import confirm from './Confirm';
+import confirm from './Confirm';
 import error from './Error';
 // import notification from './Notification';
 import success from './Success';
 
 export default {
-    // confirm,
+    confirm,
     error,
     // notification,
     success

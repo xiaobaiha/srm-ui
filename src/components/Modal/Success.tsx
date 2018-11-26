@@ -12,10 +12,6 @@ export default function success(config: ModalConfig) {
     function render(){
         ReactDOM.render(
             <Base
-                onCancel={e => {
-                    config.onCancel && config.onCancel(e);
-                    destroy();
-                }}
                 onOk={e => {
                     config.onOk && config.onOk(e);
                     destroy();

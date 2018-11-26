@@ -2,21 +2,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Base from './Base';
-import HighlightOff from '@material-ui/icons/HighlightOff';
+import Help from '@material-ui/icons/Help';
 import ModalConfig from '../../@types/ModalConfig';
 
-export default function error(config: ModalConfig) {
+export default function confirm(config: ModalConfig) {
     const div = document.createElement('div');
     document.body.append(div);
 
     function render(){
         ReactDOM.render(
             <Base
+                onCancel={e => {
+                    config.onCancel && config.onCancel(e);
+                    destroy();
+                }}
                 onOk={e => {
                     config.onOk && config.onOk(e);
                     destroy();
                 }}
-                title={<div className="flex flex-cross-center"><HighlightOff className="font-red" style={{marginRight: '0.5rem'}}/>{config.title?config.title:'错误'}</div>}
+                showCancel={true}
+                title={<div className="flex flex-cross-center"><Help className="font-help" style={{marginRight: '0.5rem'}}/>{config.title?config.title:'提示'}</div>}
                 message={<div>{config.message}</div>}
                 />,
             div);
