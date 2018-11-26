@@ -21,6 +21,10 @@ module.exports = {
     libraryTarget: 'commonjs2'
   },
 
+  resolve: {
+    extensions: ['.js', '.ts', '.tsx', '.scss']
+  },
+
   module: {
     rules: [
       { 

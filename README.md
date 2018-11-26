@@ -1,6 +1,6 @@
 # SRM-ui SRM组内组件封装
 
-使用Typescript/React Hooks，基于material-ui，对基础组件以及业务组件进行进一步封装
+使用Typescript, ~~React Hooks~~，基于material-ui，对基础组件以及业务组件进行进一步封装
 
 ## How to use
 
