@@ -7,7 +7,6 @@ interface EmptyStateProps {
     addClassName: string,
     messageClassName: string,
     message?: string,
-    illustration?: string,
     title?: string,
     action?: {
         message: string,
