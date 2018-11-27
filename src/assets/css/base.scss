@@ -189,6 +189,7 @@ div, li {
 .fill-red2  { background: #FF6666; }
 .fill-blue  { background: #82B1FF; }
 .fill-orange{ background: #ffa500; }
+.fill-light-green { background: #26cf36 }
 
 
 .keyline-all    { border:1px solid rgba(0,0,0,0.10); }
@@ -218,6 +219,8 @@ div, li {
 .font-red       { color:        #FF6666;            }
 .font-blue      { color:        #7092ff;            }
 .font-white     { color:        #ffffff;            }
+.font-light-green { color: #26cf36 }
+.font-help { color: #faad14 }
 
 .font-light     { font-weight:      300; }
 .font-strong    { font-weight:      500; }
@@ -382,4 +385,20 @@ div, li {
 
 .muted-notification__content>div {
     max-width: 88%;
+}
+
+.notification-success {
+    background-color: #43a047 !important;
+}
+
+.notification-info {
+    background-color: #1976d2 !important;
+}
+
+.notification-warning{
+    background-color: #ffa000 !important;
+}
+
+.notification-error {
+    background-color: #d32f2f !important;
 }

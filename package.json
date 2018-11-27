@@ -21,6 +21,7 @@
     "@material-ui/icons": "^3.0.1",
     "@types/node": "^10.12.10",
     "@types/react": "^16.7.0",
+    "@types/react-dom": "^16.0.10",
     "babel-core": "^7.0.0-beta.3",
     "babel-loader": "^8.0.0-beta.6",
     "babel-preset-env": "^1.7.0",

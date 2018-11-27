@@ -21,8 +21,13 @@ import {Pager} from 'srm-ui';
 
 ### npm (not available now)
 
+1. npm 安装项目
 ```bash
-npm install srm-ui
+npm install https://gitlab.momenta.works/hdmap-workflow/srm-ui.git
+```
+2. 测试项目可使用以下方式引用组件
+```javascript
+import {Pager} from 'srm-ui';
 ```
 
 ## Userful Scripts
@@ -46,6 +51,9 @@ npm run add sprite TaskList
 
 1. 分页器 Pager [Pager.md](./docs/Pager.md)
 2. 表格 Table [Table.md](./docs/Table.md)
+3. 弹窗 Modal [Modal.md](./docs/Modal.md)
+4. 通知 Notification [Notification.md](./docs/Notification.md)
+5. 数据为空 Empty [Empty.md](./docs/Empty.md)
 
 
 ## 业务组件
