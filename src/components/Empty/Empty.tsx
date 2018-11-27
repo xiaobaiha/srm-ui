@@ -1,5 +1,6 @@
 /* @flow */
 import React from "react";
+import Inbox from "@material-ui/icons/Inbox";
 
 interface EmptyStateProps {
     className: string,
@@ -18,7 +19,8 @@ class EmptyState extends React.PureComponent<EmptyStateProps> {
     static defaultProps = {
         addClassName: '',
         className: 'flex flex-center flex-verticle quiet round keyline-all keyline-dash row10 space-5 line-space',
-        messageClassName: 'center'
+        messageClassName: 'center',
+        message: '无数据'
     }
     onClick = () => {
         if (this.props.action && this.props.action.func) {
@@ -29,7 +31,7 @@ class EmptyState extends React.PureComponent<EmptyStateProps> {
     render() {
         return (
             <div className={`${this.props.className} ${this.props.addClassName}`}>
-                {this.props.illustration && (<div className={`iconfont ${this.props.illustration}`} />)}
+                <Inbox style={{width: '4rem', height: '4rem'}}/>
                 {this.props.title && (<h3 className={`${((this.props.message || this.props.action)) ? 'space-bottom0' : ''}`}>{this.props.title}</h3>)}
                 {this.props.message && (<div className={this.props.messageClassName}>{this.props.message}</div>)}
                 {this.props.action && (
