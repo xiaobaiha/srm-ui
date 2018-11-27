@@ -14,7 +14,7 @@ interface EmptyStateProps {
     },
 }
 
-class EmptyState extends React.PureComponent<EmptyStateProps> {
+class Empty extends React.PureComponent<EmptyStateProps> {
     static defaultProps = {
         addClassName: '',
         className: 'flex flex-center flex-verticle quiet round keyline-all keyline-dash row10 space-5 line-space',
@@ -41,4 +41,4 @@ class EmptyState extends React.PureComponent<EmptyStateProps> {
     }
 }
 
-export default EmptyState;
+export default Empty;

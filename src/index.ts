@@ -3,6 +3,7 @@ import Table from './components/Table/Table';
 import Pager from './components/Pager/Pager';
 import Modal from './components/Modal/Modal';
 import Notification from './components/Notification/Notification';
+import TaskList from './components/TaskList/TaskList';
 
 import "./assets/css/base.scss";
 export {
@@ -10,5 +11,6 @@ export {
     Table,
     Modal,
     Notification,
-    Empty
+    Empty,
+    TaskList
 };
