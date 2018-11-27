@@ -10,7 +10,9 @@ const docTemplate = (componentName, chineseName='') => `# ${componentName}
 ${chineseName?chineseName+'组件':''}
 ## 使用示例
 ### 基本用法
-
+\`\`\`javascript
+\`\`\`
+![](/docs/imgs/example-${componentName.toLowerCase()}0.png)
 ## props
 |属性       |说明|示例|
 |-|-|-|`;
