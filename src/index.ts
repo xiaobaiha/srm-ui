@@ -4,6 +4,7 @@ import Pager from './components/Pager/Pager';
 import Modal from './components/Modal/Modal';
 import Notification from './components/Notification/Notification';
 import TaskList from './components/TaskList/TaskList';
+import Menu from './components/Menu/Menu';
 
 import "./assets/css/base.scss";
 export {
@@ -12,5 +13,6 @@ export {
     Modal,
     Notification,
     Empty,
-    TaskList
+    TaskList,
+    Menu
 };

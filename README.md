@@ -54,6 +54,7 @@ npm run add sprite TaskList
 3. 弹窗 Modal [Modal.md](./docs/Modal.md)
 4. 通知 Notification [Notification.md](./docs/Notification.md)
 5. 空数据 Empty [Empty.md](./docs/Empty.md)
+6. 菜单 Menu [Menu.md](./docs/Menu.md)
 
 
 ## 业务组件
