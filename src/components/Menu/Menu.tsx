@@ -71,14 +71,14 @@ class Menu extends React.Component<MenuProps, MenuState> {
                             key={id} 
                             style={{paddingLeft: `${depth * 24}px`, fontSize: '1rem'}}
                             >
-                            {Icon? <Icon style={{marginLeft: '0.5rem'}} />: null}{title}
+                            {Icon? <Icon style={{marginRight: '0.5rem'}} />: null}{title}
                         </ListItem>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>{this.preRender(children, depth + 1)}</ExpansionPanelDetails>
                 </ExpansionPanel>:
                 <div>
                     <ListSubHeader className="subHeader" style={{display: 'flex', paddingLeft: `${depth * 24}px`, fontSize: '1rem', alignItems: 'center'}}>
-                        {Icon? <Icon style={{marginLeft: '0.5rem'}} />: null}{title}
+                        {Icon? <Icon style={{marginRight: '0.5rem'}} />: null}{title}
                     </ListSubHeader>
                     {this.preRender(children, depth + 1)}
                 </div>
@@ -90,7 +90,7 @@ class Menu extends React.Component<MenuProps, MenuState> {
                 style={{paddingLeft: `${depth * 24}px`, fontSize: '1rem'}}
                 onClick={() => this.handleItemClick(id)}
                 >
-                {Icon? <Icon style={{marginLeft: '0.5rem'}} />: null}{title}
+                {Icon? <Icon style={{marginRight: '0.5rem'}} />: null}{title}
             </ListItem>;
         }
     }
