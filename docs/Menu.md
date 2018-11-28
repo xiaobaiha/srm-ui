@@ -10,17 +10,17 @@
         id: '1',
         onClick: id =>console.log(id)
     },{
-        title: 'menu2'
+        title: 'menu2',
         id: '2',
         fold: false,
         children: [
             {
-                title: 'submenu1'
+                title: 'submenu1',
                 id: '3',
                 icon: <Icon />,
                 onClick: id =>console.log(id)
             }, {
-                title: 'submenu2'
+                title: 'submenu2',
                 id: '4',
                 icon: <Icon />,
                 onClick: id =>console.log(id)
