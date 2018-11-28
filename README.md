@@ -19,7 +19,7 @@ yarn link srm-ui
 import {Pager} from 'srm-ui';
 ```
 
-### npm (not available now)
+### npm
 
 1. npm 安装项目
 ```bash
