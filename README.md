@@ -23,7 +23,7 @@ import {Pager} from 'srm-ui';
 
 1. npm 安装项目
 ```bash
-npm install https://gitlab.momenta.works/hdmap-workflow/srm-ui.git
+npm install https://github.com/xiaobbaiha/srm-ui.git
 ```
 2. 测试项目可使用以下方式引用组件
 ```javascript
