@@ -32,7 +32,7 @@
     "css-loader": "^1.0.1",
     "mixin-deep": "^2.0.1",
     "node-fetch": "^2.3.0",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.13.1",
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2",
     "sass-loader": "^7.1.0",
