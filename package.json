@@ -31,7 +31,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.1",
     "mixin-deep": "^2.0.1",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.6.1",
     "node-sass": "^4.10.0",
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2",
